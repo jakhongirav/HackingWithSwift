@@ -194,7 +194,7 @@ func visitPlaces() -> (String) -> Void {
     }
 }
 let visit = visitPlaces()
-visit("London")
-visit("New York")
-visit("London")
-visit("New York")
+// visit("London")
+// visit("New York")
+// visit("London")
+// visit("New York")
