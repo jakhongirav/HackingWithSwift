@@ -1,7 +1,3 @@
-//: [Previous](@previous)
-
-import Foundation
-
 //* Optionals
 
 //? Handling missing data
@@ -27,4 +23,3 @@ func greet(name: String?) {
 }
 
 // greet(name: name)
-
