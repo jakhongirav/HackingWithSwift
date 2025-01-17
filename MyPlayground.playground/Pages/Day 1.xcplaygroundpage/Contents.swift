@@ -37,18 +37,51 @@ func checkPassword(_ password: String) throws -> Bool {
     return true
 }
 
-do {
-    try checkPassword("password")
-    print("That password is good!")
-} catch {
-    print("You can't use that password.")
-}
+//do {
+//    try checkPassword("password")
+//    print("That password is good!")
+//} catch {
+//    print("You can't use that password.")
+//}
 
-if let result = try? checkPassword("password") {
-    print("Result was \(result)")
-} else {
-    print("D'oh.")
-}
+//if let result = try? checkPassword("password") {
+//    print("Result was \(result)")
+//} else {
+//    print("D'oh.")
+//}
 
 try! checkPassword("sekrit")
-print("OK!")
+//print("OK!")
+
+let str1 = "5"
+let num = Int(str1)
+
+struct Person {
+    var id: String
+    
+    init?(id: String) {
+        if id.count == 5 {
+            self.id = id
+        } else {
+            return nil
+        }
+    }
+}
+
+//? Typecasting
+class Animal {}
+class Fish: Animal {}
+
+class Dog: Animal {
+    func makeNoise() {
+        print("Woof!")
+    }
+}
+
+let pets = [Fish(), Dog(), Fish(), Dog()]
+//! To pick Dog class from array of animals
+//for pet in pets {
+//    if let dog = pet as? Dog {
+//        dog.makeNoise()
+//    }
+//}
