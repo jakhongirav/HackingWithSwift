@@ -30,7 +30,7 @@ func albumIsTaylors(name: String) -> Bool {
     if name == "Taylor Swift" {
         return true
     }
-    
+
     return false
 }
 
@@ -50,7 +50,7 @@ func albumIsTaylors(name: String) -> Bool {
 func getHaterStatus(weather: String) -> String? {
     if weather == "sunny" {
         return nil
-    }else {
+    } else {
         return "Hate"
     }
 }
@@ -101,10 +101,10 @@ func getHaterStatus1(weather: WeatherType) -> String? {
 struct Person {
     var clothes: String
     var shoes: String
-    
+
     func describe() {
-            print("I like wearing \(clothes) with \(shoes)")
-        }
+        print("I like wearing \(clothes) with \(shoes)")
+    }
 }
 
 let taylor = Person(clothes: "T-shirts", shoes: "sneakers")
@@ -123,17 +123,17 @@ taylorCopy.shoes = "flip flops"
 class Person1 {
     var shoes: String
     var name: String
-    
-//! it should has initializer method because unline Structs it has not membervise initializers
+
+    //! it should has initializer method because unline Structs it has not membervise initializers
     init(shoes: String, name: String) {
         self.shoes = shoes
         self.name = name
     }
-    
+
     func sing() {
-            print("La la la la")
+        print("La la la la")
     }
 }
-    
+
 let taylor1 = Person1(shoes: "sneakers", name: "Taylor")
 //taylor1.sing()
