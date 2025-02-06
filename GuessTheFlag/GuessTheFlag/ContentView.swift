@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    var countries = ["Estonia", "France", "Germany", "Italy", "Nigeria", "Spain", "Poland", "UK", "Ireland", "Ukraine", "US"]
+   
+    var correctAnswer = Int.random(in: 0...2)
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color.blue.ignoresSafeArea()
+            
+            VStack {
+                VStack {
+                    Text("Tap the flag of")
+                        .foregroundStyle(.white)
+                    Text(countries[correctAnswer])
+                        .foregroundStyle(.white)
+                }
+                
+                ForEach(0..<3) { number in
+                    Button {
+                        
+                    } label: {
+                        Image(countries[number])
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
